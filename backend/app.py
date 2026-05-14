@@ -1,10 +1,10 @@
 from flask import Flask
 
-app = Flask(**name**)
+app = Flask(__name__)
 
 @app.route('/')
 def home():
-return "GeneScope Backend Running"
+    return "GeneScope Backend Running"
 
-if **name** == '**main**':
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
